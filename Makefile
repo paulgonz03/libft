@@ -1,6 +1,5 @@
-FLAG = -Wall -Wextra -Werror
 
-NAME = libft.a
+FLAG = -Wall -Wextra -Werror
 
 SRC = ft_atoi.c \
 	  ft_bzero.c \
@@ -37,10 +36,8 @@ SRC = ft_atoi.c \
 	  ft_strtrim.c \
 	  ft_split.c \
 	  ft_itoa.c \
-	  ft_printf.c \
 	  ft_putnbr.c \
 	  ft_putchr.c \
-	  get_next_line.c \
 	  ft_lstnew_bonus.c \
 	  ft_lstadd_front_bonus.c \
 	  ft_lstsize_bonus.c \
@@ -49,28 +46,23 @@ SRC = ft_atoi.c \
 	  ft_lstdelone_bonus.c \
 	  ft_lstclear_bonus.c \
 	  ft_lstiter_bonus.c \
-	  ft_lstmap_bonus.c \
 
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@ar rc $(NAME) $(OBJ)
-	@echo "$(NAME) created"
-	@ranlib $(NAME)
-	@echo "$(NAME) indexed"
+	ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
 
 %.o: %.c
-	@gcc $(FLAG) -c $< -o $@
+	gcc $(FLAG) -c $< -o $@
 
 clean:
-	@rm -f $(OBJ)
-	@echo "OBJ deleted"
+	rm -f $(OBJ)
 
 fclean: clean
-	@rm -f $(NAME)
-	@echo "$(NAME) deleted"
+	rm -f $(NAME)
 
 re: fclean all
 
