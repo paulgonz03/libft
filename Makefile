@@ -1,3 +1,4 @@
+NAME = libft.a
 
 FLAG = -Wall -Wextra -Werror
 
@@ -36,8 +37,6 @@ SRC = ft_atoi.c \
 	  ft_strtrim.c \
 	  ft_split.c \
 	  ft_itoa.c \
-	  ft_putnbr.c \
-	  ft_putchr.c \
 	  ft_lstnew_bonus.c \
 	  ft_lstadd_front_bonus.c \
 	  ft_lstsize_bonus.c \
